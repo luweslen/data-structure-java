@@ -33,7 +33,7 @@ public class Stack {
     
     public void push(Object o) throws StackFullException {
         if (isFull()){
-            throw new StackFullException ("Stack Overflow!");
+            throw new StackFullException("Stack Overflow!");
         }
         else {
             top++;
@@ -66,4 +66,8 @@ public class Stack {
     public int size(){
         return (top + 1);
     };
+
+    public Object[] getElements() {
+        return elements;
+    }
 }
