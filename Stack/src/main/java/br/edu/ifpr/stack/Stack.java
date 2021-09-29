@@ -24,7 +24,7 @@ public class Stack {
     }
     
     public boolean isEmpty(){
-        return (top<0);
+        return (top < 0);
     }
     
     public boolean isFull(){
@@ -37,7 +37,7 @@ public class Stack {
         }
         else {
             top++;
-            elements[top]=o;
+            elements[top] = o;
         }
     }
     
@@ -69,5 +69,20 @@ public class Stack {
 
     public Object[] getElements() {
         return elements;
+    }
+    
+    @Override
+    public String toString(){
+        String string = "[";
+        for (int i = 0; i < this.capacity; i++){
+            Object element = this.elements[i];
+            
+            if(element != null){
+                string += element + ",";
+            }
+        }
+        string =  string.substring(0, string.length() - 1);
+        string += "]";
+        return string;
     }
 }

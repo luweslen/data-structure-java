@@ -3,14 +3,13 @@ package br.edu.ifpr.stack;
 
 import br.edu.ifpr.stack.Exceptions.StackEmptyException;
 import br.edu.ifpr.stack.Exceptions.StackFullException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws StackFullException, StackEmptyException {
         Scanner input = new Scanner(System.in);
-        Stack stack = new Stack(3);
+        Stack stack = new Stack();
         
         int op = 1;
         Object newItem;
@@ -26,18 +25,18 @@ public class Main {
                     System.out.println("Elemento?");
                     newItem = input.nextInt();
                     stack.push(newItem);
-                    System.out.println("Elemento empilhado com sucesso");
+                    System.out.println("Elemento empilhado com sucesso!");
                 }
                 case 2 -> {
                     elementUnstack = stack.pop();
-                    System.out.println("Elemento desempilhado é:" + elementUnstack);
+                    System.out.println("Elemento desempilhado é: " + elementUnstack);
                     
                 }
                 case 3 -> {
                     elementTop = stack.top();
-                    System.out.println("Elemento do topo é:" + elementTop);
+                    System.out.println("Elemento do topo é: " + elementTop);
                 }
-                case 4 -> System.out.println("Pilha: " + Arrays.toString(stack.getElements()));
+                case 4 -> System.out.println("Pilha: " + stack);
                 default -> System.out.println("Operação inválida!");   
             }
         }

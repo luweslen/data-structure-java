@@ -1,12 +1,7 @@
 package br.edu.ifpr.stack.Exceptions;
 
-
-
-
-public class StackEmptyException extends Exception {
-
-    public StackEmptyException(String stack_Underflow) {
-        super(stack_Underflow);
+public class StackEmptyException extends RuntimeException {
+    public StackEmptyException(String stackUnderflow) {
+        super(stackUnderflow);
     }
-    
 }
