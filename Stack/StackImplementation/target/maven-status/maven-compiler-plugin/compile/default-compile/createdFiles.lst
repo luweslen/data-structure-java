@@ -1,0 +1,4 @@
+br/edu/ifpr/stack/Exceptions/StackEmptyException.class
+br/edu/ifpr/stack/Exceptions/StackFullException.class
+br/edu/ifpr/stack/Stack.class
+br/edu/ifpr/stack/Main.class
