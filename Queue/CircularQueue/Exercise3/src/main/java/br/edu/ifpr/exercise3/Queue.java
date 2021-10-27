@@ -76,16 +76,16 @@ public class Queue {
         if(ord){
             for(int i = 0; i < this.count; i++){
                int newIindex = i;
-               int oldIndex = ((this.count + i) + 1) % this.capacity;
-               
+               int oldIndex = ((this.front + i) % this.capacity);
                activeElements[newIindex] = this.elements[oldIndex];
             }   
         } else {
-            for(int i = count - 1; i >= 0; i--){
-               int newIindex = (((i - this.count) + 1) * -1);
-               int oldIndex = (((this.count + i) + 1) % this.capacity);
-               
-               activeElements[newIindex] = this.elements[oldIndex];
+            int index = this.count - 1;
+            for(int aux = 0; aux < this.count; aux++){
+               int oldIndex = ((this.front + aux) % this.capacity);
+              
+               activeElements[index] = this.elements[oldIndex];
+               index--;
             } 
         }
         

@@ -74,3 +74,14 @@ public Object [] toArray (boolean ord) { ... }
 > (*) teste os casos em que o índice do início (front) é maior que o índice da próxima posição livre (rear).
 
 **Code:** [Click here](https://github.com/devweslen/data-structure-java/blob/main/Queue/CircularQueue/Exercise3/src/main/java/br/edu/ifpr/exercise3/Main.java)
+
+
+[6, null, 3, 4, 5]
+rear 1 -> [0]
+count 4 
+capcacity 5
+
+0 -> 0
+1 -> 4
+2 -> 3
+3 -> 2
