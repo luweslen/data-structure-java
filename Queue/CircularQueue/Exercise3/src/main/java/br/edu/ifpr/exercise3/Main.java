@@ -26,7 +26,7 @@ public class Main {
                         System.out.println("Digite o elemento?");
                         newItem = input.next();
                         queue.enqueue(newItem);
-                        System.out.println("Elemento empilhado com sucesso!");
+                        System.out.println("Elemento enfileirado com sucesso!");
                     } catch(QueueFullException e) {
                         System.out.println("Erro de overflow – fila cheia");
                     }
