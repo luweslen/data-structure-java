@@ -65,7 +65,7 @@ public class Stack {
     }
     
     public Object[] popN (int n) throws StackEmptyException {
-        if((this.size() - n) > this.capacity){
+        if((this.size() - n) < 0){
             throw new StackEmptyException("Stack Underflow!");
         }
         
