@@ -69,7 +69,7 @@ public class LinkedList {
     }
     
     public Object get(int index) throws IndexOutOfBoundsException {
-        if (index < 0 || index >= size){
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         } else {
             Node cur = head;
@@ -91,16 +91,17 @@ public class LinkedList {
                 cur = cur.getNext();
             }
             
+            Object old = cur.getElement();
             cur.setElement(element);
             
-            return (cur.getElement());
+            return old;
         }
     }
     
     public Object remove(int index) {
         if (index < 0 || index >= size){
             throw new IndexOutOfBoundsException();
-        }else {
+        } else {
             Object temp;
             if (index == 0) {
                 temp = head.getElement();
@@ -119,5 +120,20 @@ public class LinkedList {
             size--;
             return temp;
         }
+    }
+    
+    @Override
+    public String toString(){
+        Node cur = head;
+        String string = "[";
+        
+        while(cur != null){
+            string += " " + cur.getElement() + ",";
+            cur = cur.getNext();
+        }
+        
+        string =  string.substring(0, string.length() - 1);
+        string += " ]";
+        return string;
     }
 }

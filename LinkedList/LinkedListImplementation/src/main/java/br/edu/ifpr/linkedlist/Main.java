@@ -11,10 +11,10 @@ public class Main {
         
         int op = 1;
         
-        System.out.println("# LISTA DE NÚMEROS INTEIROS");
+        System.out.println("# TESTANDO UMA LISTA ENCADEADA");
         
         while(op != 0){
-            System.out.println("Qual a opção? (1) Inserir com index (2) Inserir sem index (3) Remover (4) Acessar (0) Sair");
+            System.out.println("Qual a opção? (1) Inserir com index (2) Inserir sem index (3) Remover (4) Acessar (5) Mudar elemento pelo index (6) Mostrar (0) Sair");
             op = input.nextInt();
             
             switch(op){
@@ -60,10 +60,14 @@ public class Main {
                         System.out.println("Digite o novo elemento:");
                         Object updateValue = input.next();
 
-                        list.set(index, updateValue);
+                        Object oldValue = list.set(index, updateValue);
+                        System.out.println("Elemento antigo: " + oldValue);
                     } catch(IndexOutOfBoundsException e) {
                         System.out.println("Index inválido!");
                     } 
+                }
+                case 6 -> {
+                    System.out.println(list.toString());
                 }
                 default -> System.out.println("Operação inválida!");   
             }
