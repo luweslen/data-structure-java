@@ -15,10 +15,11 @@ public class LQueue {
         if(this.size == 0) {
             this.front = n;
             this.rear = n;
+        } else {
+            this.rear.setNext(n);
+            this.rear = n;
         }
 
-        this.rear.setNext(n);
-        this.rear = n;
 
         size++;
     }
